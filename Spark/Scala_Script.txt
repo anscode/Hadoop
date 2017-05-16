@@ -1,1 +1,13 @@
 #Scala Script
+
+val ordersRDD = sc.textFile("C:\\bkp\\Data\\Retail_Db\\order.txt")
+
+val orderItemsRDD = sc.textFile("C:\\bkp\\Data\\Retail_Db\\order_detail.txt")
+
+val orderRDDFirst=ordersRDD.first()
+val orderdetailRDDFirst=orderItemsRDD.first() 
+
+val ordersParsedRDD = ordersRDD.filter(f=>f != orderRDDFirst).map(rec => (rec.split(",")(0).toInt, rec))
+val orderItemsParsedRDD = orderItemsRDD.filter(f=>f != orderdetailRDDFirst).map(rec => (rec.split(",")(1).toInt, rec))
+
+val orderdetailjoin=orderItemsParsedRDD.join(ordersParsedRDD)
