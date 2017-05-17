@@ -1,0 +1,5 @@
+﻿CustomerID	FName	MName	LName	Gender	Email
+11000	Jon	V	Yang	M	jon24@adventure-works.com
+11001	Eugene	L	Huang	M	eugene10@adventure-works.com
+11002	Ruben	NULL	Torres	M	ruben35@adventure-works.com
+11003	Christy	NULL	Zhu	F	christy12@adventure-works.com

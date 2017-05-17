@@ -1,0 +1,17 @@
+case class Customer(CustomerKey:Int,FirstName:String,MiddleName:String,LastName:String,Gender:String,Email:String);
+
+case class Sales(CustomerKey:Int,ProductKey:Int,Total:String);
+
+case class Product(ProductKey:Int,Category:String,ProductName:String);
+
+ var customerFile=sc.textFile("test/AdventureWorks/customer.txt");
+ 
+ var customerData=customerFile.map(r=>r.split("\t")).map(r=> (r(0),Customer(r(0).toInt,r(1),r(2),r(3),r(4),r(5))));
+ 
+ var salesFile=sc.textFile("test/AdventureWorks/sales.txt");
+ 
+ var salesData=salesFile.map(r=>r.split("\t")).map(r=>(r(0),Sales(r(0).toInt,r(1).toInt,r(2))));
+ 
+var customerSales= customerData.join(salesData);
+
+customerSales.saveAsTextFile("file:/C:/Users/ashrestha/Downloads/spark/Test/AdventureWorks/test0244.txt");

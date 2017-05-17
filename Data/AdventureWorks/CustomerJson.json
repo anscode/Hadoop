@@ -1,0 +1,13 @@
+[
+    { "CustomerKey": "11000", "FirstName": "Jon", "MiddleName": "V", "LastName": "Yang", "Gender": "M", "EmailAddress": "jon24@adventure-works.com" },
+    { "CustomerKey": "11001", "FirstName": "Eugene", "MiddleName": "L", "LastName": "Huang", "Gender": "M", "EmailAddress": "eugene10@adventure-works.com" },
+    { "CustomerKey": "11002", "FirstName": "Ruben", "LastName": "Torres", "Gender": "M", "EmailAddress": "ruben35@adventure-works.com" },
+    { "CustomerKey": "11003", "FirstName": "Christy", "LastName": "Zhu", "Gender": "F", "EmailAddress": "christy12@adventure-works.com" },
+    { "CustomerKey": "11004", "FirstName": "Elizabeth", "LastName": "Johnson", "Gender": "F", "EmailAddress": "elizabeth5@adventure-works.com" },
+    { "CustomerKey": "11005", "FirstName": "Julio", "LastName": "Ruiz", "Gender": "M", "EmailAddress": "julio1@adventure-works.com" },
+    { "CustomerKey": "11006", "FirstName": "Janet", "MiddleName": "G", "LastName": "Alvarez", "Gender": "F", "EmailAddress": "janet9@adventure-works.com" },
+    { "CustomerKey": "11007", "FirstName": "Marco", "LastName": "Mehta", "Gender": "M", "EmailAddress": "marco14@adventure-works.com" },
+    { "CustomerKey": "11008", "FirstName": "Rob", "LastName": "Verhoff", "Gender": "F", "EmailAddress": "rob4@adventure-works.com" },
+    { "CustomerKey": "11009", "FirstName": "Shannon", "MiddleName": "C", "LastName": "Carlson", "Gender": "M", "EmailAddress": "shannon38@adventure-works.com" },
+    { "CustomerKey": "11010", "FirstName": "Jacquelyn", "MiddleName": "C", "LastName": "Suarez", "Gender": "F", "EmailAddress": "jacquelyn20@adventure-works.com" }
+]
