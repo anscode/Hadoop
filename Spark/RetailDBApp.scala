@@ -12,7 +12,7 @@ object RetailDBApp{
     
     val orderFileURL="C:\\bkp\\Data\\Git\\anscode\\Hadoop\\Data\\Retail_DB\\order.txt"
     val orderDetailFileURL ="C:\\bkp\\Data\\Git\\anscode\\Hadoop\\Data\\Retail_DB\\order_detail.txt"
-
+    val saveLocaitonURL="C:\\bkp\\Data\\Git\\anscode\\Hadoop\\Data\\Retail_DB\\New"
    
 
     def main(args:Array[String])
@@ -60,6 +60,9 @@ object RetailDBApp{
         val orderDateAndPrice=orderOrderDetailJoin.map(m=>(m._2._1.split(",")(1),m._2._2.split(",")(4).toFloat))
         val orderTotalByDate=orderDateAndPrice.reduceByKey((x,y)=>x+y)
         orderTotalByDate.filter(f=>f._1=="2008-01-31 00:00:00").collect().foreach(println)
+        orderTotalByDate.map(t=>t._1+"\t"+t._2).saveAsTextFile(saveLocaitonURL) //save file tab delimited
+
+        
     }
 
     def dataSetOperation(sc:SparkContext){
