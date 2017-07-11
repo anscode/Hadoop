@@ -45,6 +45,7 @@ object RetailDBApp{
         println("==>End of program<==") 
     }
 
+    //RDD operation
     def rddOperation(sc:SparkContext)
     {
         println("RDD operation")
@@ -65,6 +66,7 @@ object RetailDBApp{
         
     }
 
+    //dataset operation
     def dataSetOperation(sc:SparkContext){
         println("DataSet operation")
         val sqlContext= new SQLContext(sc)
