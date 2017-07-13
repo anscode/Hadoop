@@ -1,5 +1,30 @@
 #Scala Script
 
+val arr= Array(1,2,3,4)
+for(x <- arr)
+    println(x)
+
+#List are immutable
+var ls=List(1,2,3,4,)
+ls(1)=> 2
+
+#set are immutalble and mutable. no duplicate
+var s=Set(1,2,3,4)
+
+#Map are immutalble and mutable.key/value. no duplicate key
+val colors = Map("red" -> "#FF0000", "azure" -> "#F0FFFF")
+colors.keys => Set(red, azure)
+colors.values => MapLike(#FF0000, #F0FFFF)
+colors.isEmpty => False
+
+# tuple can hold objects with different types but they are also immutable
+val t = (1, "hello", 15.55)
+t._2 => hello
+
+val a=(1,2,3)
+a._1+a._2+a._3 => 6
+
+
 #------Transformation----------------
 
 #map(func)	Return a new distributed dataset formed by passing each element of the source through a function func.
@@ -29,6 +54,12 @@ println(y.collect().mkString(", "))
 
 1,2,3
 1, 100, 42, 2, 200, 42, 3, 300, 42
+
+scala> ls.map(m=>m.split(" "))
+res5: List[Array[String]] = List(Array(this, is), Array(the, test))
+
+scala> ls.flatMap(m=>m.split(" "))
+res6: List[String] = List(this, is, the, test)
 
 #mapPartitions(func)	Similar to map, but runs separately on each partition (block) of the RDD, so func must be of type Iterator<T> => Iterator<U> when running on an RDD of type T.
 #todo.
